@@ -1,5 +1,7 @@
 -- T-SQL queries by @Anna-Portfolio --https://github.com/anna-portfolio
 --OPERATIONS ON TABLES: JOIN, GROUP BY, ORDER BY, HAVING, ALIASES
+
+
 --list all data from the Order Details table and the product ID, product name and unit price from the Products table
 --(ProductID, ProductName, and UnitPrice columns from the Products table).
 SELECT [Order Details].*, P.ProductName, P.UnitPrice 
@@ -28,14 +30,14 @@ WHERE Orders.CustomerID IS NULL
  WHERE Country LIKE 'Germany' 
 
 
---specify the number of customers per country (Customers table). Sort the data ascending by country name.
+--specify the number of customers per country (Customers table). Sort the data ascending by country name
 SELECT Count (*) AS Total, Country 
 From Customers 
 GROUP BY Country 
 ORDER BY Country ASC 
 
 --modify the query above: data is sorted descending by the number of customers and if there are the same number of customers from certain countries
---these records should be sorted ascending by the name of the country.
+--these records should be sorted ascending by the name of the country
 SELECT Count (*) AS Total, Country 
 From Customers 
 GROUP BY Country 
