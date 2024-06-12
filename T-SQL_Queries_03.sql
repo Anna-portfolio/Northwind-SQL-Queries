@@ -1,7 +1,5 @@
---Anna Dudek, Album 12064
-
---Wykonaj zadania w SQL management studio, a nastêpnie wklej u¿yte zapytanie SQL:
-
+-- T-SQL queries by @Anna-Portfolio --https://github.com/anna-portfolio
+--OPERATIONS ON TABLES: JOIN, GROUP BY, ORDER BY, HAVING, ALIASES
 --list all data from the Order Details table and the product ID, product name and unit price from the Products table
 --(ProductID, ProductName, and UnitPrice columns from the Products table).
 SELECT [Order Details].*, P.ProductName, P.UnitPrice 
@@ -21,11 +19,11 @@ WHERE Orders.CustomerID IS NULL
 
 
 -- list the number of the customers (Customers table)
- SELECT Count (*) 
+Â SELECT Count (*) 
  From Customers
 
 --modify the query above: only the customers from Germany are counted
- SELECT Count (*) 
+Â SELECT Count (*) 
  From Customers 
  WHERE Country LIKE 'Germany' 
 
